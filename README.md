@@ -11,16 +11,23 @@
 			-d "{"user": "root", "hostname": "10.10.10.10"}"
 	добавить массив хостов 
 		POST 
+
 			curl "http://localhost:8880/warapig/0.1/hosts&key=Art0fWar" 
 			-d "{hosts: [
 				{"user": "root", "hostname": "10.10.10.10"}
 				, {"user": "root", "hostname": "10.10.10.11"}
 				]}"
+
 		дополнительные поля которые могут быть указаны
+
 			"username": "Vasja Pupkin"
+
 		в паре
+
 			"auth_type": "password", "password": "DieMyDarling" 
+
 		или
+
 			"auth_type": "key", "password": "asasdasdasdasd65asd765asd67as5d6"
 	
 	получить инфу по хосту
