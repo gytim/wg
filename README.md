@@ -6,6 +6,7 @@
 	
 	добавить хост
 		POST 
+
 			curl "http://localhost:8880/warapig/0.1/host&key=Art0fWar" 
 			-d "{"user": "root", "hostname": "10.10.10.10"}"
 	добавить массив хостов 
