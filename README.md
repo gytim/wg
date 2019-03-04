@@ -28,7 +28,8 @@
 	
 	2.3 получить инфу по хосту
 
-		GET curl -XPOST -H 'Content-Type: application/json' "http://localhost:8880/warapig/0.1/host/10.10.10.10&key=Art0fWar"
+		GET curl -XPOST -H 'Content-Type: application/json' 
+		"http://localhost:8880/warapig/0.1/host/10.10.10.10&key=Art0fWar"
 
 	полный ответ
 
