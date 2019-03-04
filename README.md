@@ -19,16 +19,12 @@
 				]}"
 
 		дополнительные поля которые могут быть указаны
-
 			"username": "Vasja Pupkin"
-
+			
 		в паре
-
 			"auth_type": "password", "password": "DieMyDarling" 
-
 		или
-
-			"auth_type": "key", "password": "asasdasdasdasd65asd765asd67as5d6"
+			"auth_type": "key", "key": "asasdasdasdasd65asd765asd67as5d6"
 	
 	получить инфу по хосту
 		GET curl -XPOST -H 'Content-Type: application/json' "http://localhost:8880/warapig/0.1/host/10.10.10.10&key=Art0fWar"
