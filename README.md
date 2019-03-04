@@ -5,31 +5,33 @@
 2. Т.к. для меня не понятные json запросы в задании, точнее недостаточно данных, я отталкиваюсь от:
 	
 	добавить хост
-		POST 
 
+		POST 
 			curl "http://localhost:8880/warapig/0.1/host&key=Art0fWar" 
 			-d "{"user": "root", "hostname": "10.10.10.10"}"
 	добавить массив хостов 
-		POST 
 
+		POST 
 			curl "http://localhost:8880/warapig/0.1/hosts&key=Art0fWar" 
 			-d "{hosts: [
 				{"user": "root", "hostname": "10.10.10.10"}
 				, {"user": "root", "hostname": "10.10.10.11"}
 				]}"
 
-		дополнительные поля которые могут быть указаны
+	дополнительные поля которые могут быть указаны
 			"username": "Vasja Pupkin"
 			
-		в паре
+	в паре
 			"auth_type": "password", "password": "DieMyDarling" 
 		или
 			"auth_type": "key", "key": "asasdasdasdasd65asd765asd67as5d6"
 	
 	получить инфу по хосту
+
 		GET curl -XPOST -H 'Content-Type: application/json' "http://localhost:8880/warapig/0.1/host/10.10.10.10&key=Art0fWar"
 
-		полный ответ
+	полный ответ
+
 			{"username": "Vasja Pupkin", 
 			 "user": "root", 
 			 "auth_type": "password", 
@@ -41,11 +43,14 @@
 				"branch": "https://svnserver/project", "revision": "1"}
 			}
 
-			если нет подключения к хосту то git и svn будут отсутсвовать
+	если нет подключения к хосту то git и svn будут отсутсвовать
+
 	получить информацию по хостам
+
 		GET  "http://localhost:8880/warapig/0.1/hosts&key=Art0fWar"
 		
-		ответ
+	ответ
+
 			{"hosts": [
 				{"username": "Vasja Pupkin", "user": "root", "auth_type": "password", "host": "10.10.10.10", 
 			 	 "active": false},  
