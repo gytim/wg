@@ -203,15 +203,14 @@ Dialog {
             Material.background: "#C8E6C9"
 
             onClicked: {
-                var type = "psw"
+                var typePorK = "psw"
                 var password = passwordText.text
 
                 if(authType.sshKey) {
-                    type = "key"
+                    typePorK = "key"
                     password = sshKeyText.text
                 }
-
-                pyWarClient.addItem(hostText.text, userText.text, usernameText.text, type, password)
+                pyWarClient.addItem(hostText.text, userText.text, usernameText.text, typePorK, password)
                 buttonArea.clearAll()
                 hostAddDialog.close()
             }

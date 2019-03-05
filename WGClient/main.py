@@ -27,8 +27,8 @@ class WG(QObject):
         request.updateServer(pyWarHostModel.hostList)
 
     @pyqtSlot(str, str, str, str, str)
-    def addItem(self, host, user, username, type, password):
-        pyWarHostModel.addItem(host, user, username, type, password)
+    def addItem(self, hostname, user, username, type, password):
+        pyWarHostModel.addItem(hostname, user, username, type, password)
 
     @pyqtSlot(str)
     def deleteItem(self, id):

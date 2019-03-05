@@ -18,20 +18,23 @@ class HostModel(QObject):
     def hosts(self):
         return QQmlListProperty(Host, self, self.hostList)
 
-    def addItem(self, host='', user='', username = '', password='', typeAuth='psw'):
+    def addItem(self, hostname='', user='', username = '', typeAuth='psw', password=''):
         h1 = Host()
         self.index = self.index + 1
         h1._it = self.index
         h1._user = user
         h1._username = username
-        h1._host = host
+        h1._hostname = hostname
         h1._typeAuth = typeAuth
         h1._password = password
 
         self.hostList.append(h1)
         self.hostsChanged.emit()
 
-    def updateModel(self, requestAnswer):
+    def updateModel(self, _hostList):
+        del self.hostList
+
+        self.hostList = _hostList
 
         self.hostsChanged.emit()
 

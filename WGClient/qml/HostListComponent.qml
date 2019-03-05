@@ -40,7 +40,7 @@ ItemDelegate {
 
         font.pointSize: 10
 
-        text: host
+        text: hostname
 
     }
     Text {

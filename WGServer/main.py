@@ -103,7 +103,6 @@ def searchGitAndSVN():
         lock.release()
         time.sleep(GP.timeSleepUpdate)
 
-
 if __name__ == "__main__":
     runUpdate = threading.Thread(target=searchGitAndSVN)
 

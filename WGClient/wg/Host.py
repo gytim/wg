@@ -37,11 +37,11 @@ class Host(QObject):
 
     @pyqtProperty('QString')
     def user(self):
-        return self._username
+        return self._user
 
     @pyqtProperty('QString')
     def username(self):
-        return self._user
+        return self._username
 
     @pyqtProperty('QString')
     def password(self):

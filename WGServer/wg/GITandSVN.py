@@ -13,7 +13,7 @@ def initConnect(host):
     if host.typeAuth == 'key':
         try:
             key = paramiko.RSAKey(data=base64.b64decode(bytes(host.key, encoding='utf-8')))
-            ssh.connect(hostname=host.getHost, username=host.hostuser, pkey=host.key())
+            ssh.connect(hostname=host.hostname, username=host.hostuser, pkey=host.key())
         except:
             host.setPassword(host.key)
 

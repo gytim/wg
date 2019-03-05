@@ -25,28 +25,27 @@ def updateModel():
     try:
         r = requests.get('http://' + str(GB.host) + '/warapig/0.1/hosts&key=' + GB.key)
         if not statusCode(r.status_code):
-            print("error")
             return hosts
     except:
         print("erorr")
 
     answer = r.json()
-    print(answer)
 
     array = answer['hosts']
     for data in array:
         host = Host()
-        print(data)
+
         host._hostname = str(data['hostname'])
         host._user = str(data['user'])
+        host._activeHost = bool(data['active'])
+
+        if 'username' in data:
+            host._username = data['username']
 
         if not bool(data['active']):
             host._activeHost = False
             hosts.append(host)
             continue
-
-        if 'username' in data:
-            host._username = data['username']
 
         host._typeAuth = str(data['auth_type'])
 
@@ -62,11 +61,11 @@ def updateModel():
 
     return hosts
 
+
 def updateServer(hostlist):
-    hostList4JSON= []
+    hostList4JSON = []
 
     for host in hostlist:
-
         host4JSON = (
             {"user": str(host.user),
              "hostname": str(host.hostname),
@@ -81,8 +80,8 @@ def updateServer(hostlist):
 
         hostList4JSON.append(host4JSON)
 
-    print(json.dumps({"hosts": hostList4JSON}))
     headers = {'Content-type': 'application/json'}
+
     try:
         r = requests.post('http://' + str(GB.host) + '/warapig/0.1/addhosts&key=' + str(GB.key),
                             data=json.dumps({"hosts": hostList4JSON}),
