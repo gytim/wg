@@ -99,7 +99,7 @@ def getHost(tmp_hosts, tmp_host):
         answer = []
         for host in tmp_hosts:
             if host.hostname == tmp_host:
-                answer_item = {"username": host.user, "user": host.hostuser, "auth_type": host.typeAuth, "host": host.hostname}
+                answer_item = {"username": host.user, "user": host.hostuser, "auth_type": host.typeAuth, "hostname": host.hostname}
 
                 if not host.activeHost:
                     answer_item.update({"active": bool(False)})
@@ -125,7 +125,7 @@ def getHosts(tmp_hosts):
     try:
         answer = []
         for host in tmp_hosts:
-            answer_item = {"username": host.user, "user": host.hostuser, "auth_type": host.typeAuth, "host": host.hostname}
+            answer_item = {"username": host.user, "user": host.hostuser, "auth_type": host.typeAuth, "hostname": host.hostname}
 
             if not host.activeHost:
                 answer_item["active"] = bool(False)

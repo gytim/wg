@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/Head.qml</file>
+        <file>qml/HostForm.qml</file>
+        <file>qml/HostListComponent.qml</file>
+        <file>qml/HostListHeader.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>img/baseline-add_circle-24px.svg</file>
+        <file>img/baseline-cancel-24px.svg</file>
+        <file>img/baseline-play_arrow-24px.svg</file>
+        <file>img/baseline-stop-24px.svg</file>
+        <file>qml/HostAdd.qml</file>
+    </qresource>
+</RCC>
