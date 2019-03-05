@@ -1,3 +1,8 @@
+# Принцип работы
+# В модели хранятся данные добавленных хостов
+# При запуске обмена происходит: Очистка сервера, Добавление всего списка из модели на сервер
+# При получении ответа, чистится модель и заполняется данными сервера
+#
 import sys
 
 from PyQt5.QtGui import QGuiApplication
@@ -13,11 +18,11 @@ import wg.GlobalParams as GP
 class WG(QObject):
     def __init__(self):
         QObject.__init__(self)
-
+    
     @pyqtSlot()
     def updateModel(self):
         pyWarHostModel.updateModel(request.updateModel())
-
+    
     @pyqtSlot(str, str)
     def updateServer(self, hostserver, keyserver):
         GP.host = hostserver
