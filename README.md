@@ -25,7 +25,7 @@
 			"username": "Vasja Pupkin"
 			
 	в паре
-			"auth_type": "password", "password": "DieMyDarling" 
+			"auth_type": "psw", "password": "DieMyDarling" 
 		или
 			"auth_type": "key", "key": "asasdasdasdasd65asd765asd67as5d6"
 	
