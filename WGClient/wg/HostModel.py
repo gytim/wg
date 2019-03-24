@@ -11,8 +11,8 @@ class HostModel(QObject):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.index = -1
-        self.hostList = []
+        self.index = -1     # переменная: счетчик ид элемента
+        self.hostList = []  # список элементов
 
     @pyqtProperty(QQmlListProperty, notify=hostsChanged)
     def hosts(self):
