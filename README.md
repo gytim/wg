@@ -1,9 +1,14 @@
-**Мой вариант состоит из двух отдельных программ.
-Следить -server и отображать -client** 
-на [Задание](https://github.com/gytim/wg/blob/master/task.txt)
+**ДАНО [Задание](https://github.com/gytim/wg/blob/master/task.txt) создать api**
 
-Сделано за выходные.
+Для запуска использовать: python3.5+
+
+**Мой результат состоит из двух отдельных программ.**
+
+Следить -server <https://github.com/gytim/wg/WGServer/> и 
+отображать -client <https://github.com/gytim/wg/WGClient/>
+
+
  
 **Если код некрасивый или явные ошибки, буду не против критики. почта: ahrimana @ rambler.ru**
 
-Для запуска использовать: python3.5+
+Сделано за выходные.
