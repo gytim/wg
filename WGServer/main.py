@@ -4,6 +4,7 @@
 import flask
 import threading
 import time
+import copy
 
 import wg.GlobalParams as GP
 import wg.PostGet as PostGet
@@ -70,13 +71,13 @@ def add_host():
 # Получить
 @app.route('/warapig/0.1/hosts&key=' + GP.key,  methods=['GET'])
 def get_hosts():
-    tmp_hosts = listHost
+    tmp_hosts = copy.deepcopy(listHost)
     return PostGet.getHosts(tmp_hosts)
 
 
 @app.route('/warapig/0.1/host/<host>&key=' + GP.key,  methods=['GET'])
 def get_host(host):
-    tmp_hosts = listHost
+    tmp_hosts = copy.deepcopy(listHost)
     return PostGet.getHost(tmp_hosts, str(host))
 
 
