@@ -1,6 +1,6 @@
 **Мой вариант состоит из двух отдельных программ.
-Следить -server и отображать -client**
-[Задание](https://github.com/gytim/wg/blob/master/task.txt)
+Следить -server и отображать -client** 
+на [Задание](https://github.com/gytim/wg/blob/master/task.txt)
 
 Сделано за выходные.
  
