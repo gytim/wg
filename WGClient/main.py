@@ -14,15 +14,17 @@ from wg.HostModel import HostModel
 import wg.Request as request
 import wg.GlobalParams as GP
 
-
+# в qml 4 кнопки
 class WG(QObject):
     def __init__(self):
         QObject.__init__(self)
-    
+        
+    # обновляем отображения списка
     @pyqtSlot()
     def updateModel(self):
         pyWarHostModel.updateModel(request.updateModel())
     
+    # Обвновляем информацию на сервере
     @pyqtSlot(str, str)
     def updateServer(self, hostserver, keyserver):
         GP.host = hostserver
@@ -31,10 +33,12 @@ class WG(QObject):
         request.clearServer()
         request.updateServer(pyWarHostModel.hostList)
 
+    # Добавляем хост в список
     @pyqtSlot(str, str, str, str, str)
     def addItem(self, hostname, user, username, type, password):
         pyWarHostModel.addItem(hostname, user, username, type, password)
 
+    # Удаляем хост из списка
     @pyqtSlot(str)
     def deleteItem(self, id):
         pyWarHostModel.deleteItem(id)
