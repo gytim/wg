@@ -4,8 +4,9 @@
 
 **Мой результат состоит из двух отдельных программ.**
 
-Следить -server <https://github.com/gytim/wg/tree/master/WGServer> и 
-отображать -client <https://github.com/gytim/wg/tree/master/WGClient>
+Следить -server [WGServer](https://github.com/gytim/wg/tree/master/WGServer) и 
+
+отображать -client [WGClient](https://github.com/gytim/wg/tree/master/WGClient)
 
 
  
